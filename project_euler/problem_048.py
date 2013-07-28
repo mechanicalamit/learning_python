@@ -1,6 +1,6 @@
 print ('this program prints the sum of self powers upto 1000')
-i=0
-a=1
+i=1
+a=0
 while i<=1000:  
     a=a+pow(i,i)
     i=i+1
