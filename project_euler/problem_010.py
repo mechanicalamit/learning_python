@@ -6,11 +6,11 @@ i=2;
 count=0;
 s=77;
 from math import sqrt
-def reset():
+def reset(): # to reset the value of count
     global count
     count=0
 while n<=2000000:
-   if n%2!=0 or n%3!=0 or n%5!=0 or n%7!=0 or n%11!=0 or n%13!=0 or n%17!=0 or n%19!=0: 
+   if n%2!=0 or n%3!=0 or n%5!=0 or n%7!=0 or n%11!=0 or n%13!=0 or n%17!=0 or n%19!=0:  # excluding no's divisible by primes
         for i in range(2,(n-1)/2):
          if i<=int(sqrt(n)): 
           if i%2!=0 or i%3!=0 or i%5!=0 or i%7!=0 or i%11!=0 or i%13!=0 or i%17!=0 or i%19!=0:
