@@ -19,18 +19,23 @@ What is the largest prime factor of the number 600851475143 ?
 """
 
 
-print('this program displays the prime factors of a number entered')
-i=1
-j=1
-k=0
-num=int(input('enter a number'))
-while i<=num:
-  if num%i==0:
-    k=0
-    while j<=i
-      if i%j==0:
-        k=k+1
-      j=j+1
-      if k==2:
-        print(i)
-  i=i+1      
+i=2;
+n=600851475143;
+x=1;
+def reset():
+    global x
+    x=1
+from math import sqrt
+while i<=int(sqrt(n)):
+               if n%i==0:
+                   while x<=int(sqrt(i)):
+                     if i%x==0:
+                       print(i)
+                       x=x+1
+                     else:
+                       x=x+1 
+                   i=i+1
+                   reset()
+               else:
+                   i=i+1
+                   reset() 
