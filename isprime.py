@@ -1,22 +1,18 @@
 #to check whether  a number is prime
 from math import sqrt
-x=0;
 def isprime(n):
     i=2;
-    count=0;
     x=int(sqrt(n))
     for i in range(2,x+1):
         if n%i==0:
-            count=count+1
-            if count==1:
-                print('False')
-                return
-    if count==0:
-        print('True')
+            print('false')
+            return False
     else:
-        print('False')
-n=int(input('Enter a number :'))
+        print('true')
+        return True
+n=int(input('Enter a number'))
 isprime(n)
+
 
 """
 Lets write an algorithm to check for a prime
