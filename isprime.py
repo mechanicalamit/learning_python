@@ -1,3 +1,4 @@
+import timeit
 from math import sqrt
 
 #to check whether  a number is prime
@@ -33,5 +34,36 @@ So an algorithm would look like this
 ---- loop over index from 2 thru floor(sqrt(n))
 ------ if the index is a divisor to n, return False immediately, no need to check for others
 ---- if the loop exists and we still have not found a divisor, the number must be prime, return true
+"""
 
 """
+The functions below are used to check isprime.py. We first print out the
+list of primes from 2 thru 100. Then we time how long it takes to
+calculate primes from 2 to 1 million. We will use this to improve out
+function.
+"""
+
+"""
+This function prints a list of primes from 2 thru 99.
+We can tell if the isprime functinos works ok
+"""
+def printchecklist():
+    for n in range(2,100):
+        if isprime(n):
+            print(n, ' is prime')
+
+"""
+Lets time calculating primes from 2 to 1,000,000 a few times
+"""
+def timeprimes():
+    for n in range(2,1000000):
+        if n % 100000 == 0:
+	    print('Calculating for ', n)
+    	isprime(n)
+	
+
+
+if __name__ == "__main__":
+    printchecklist()
+    t = timeit.Timer(stmt=timeprimes)
+    print('Time to calculate primes to 1 million is ', t.timeit(number=1), ' seconds')
