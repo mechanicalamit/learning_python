@@ -31,6 +31,6 @@ while i<=10000:
                 c=n
         x=str(n)
         if len(x)>1000:
-                print('more than 3 digit', i-5)
+                print('more than 1000 digit', i-5)
                 break
         i=i+1
